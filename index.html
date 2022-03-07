@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC-driven1</title>
+
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <button onclick="mudarcor()">Clica em min</button>
+            <br>
+            <button onfocus="mudarcor()">Foca em min</button>
+            <br>
+            <button ondblclick="mudarcor()">Me aperta 2 vezes</button>
+            <br>
+            <button id="keypress" onkeydown="mudarcor()">aperta o botao pra baixo</button>
+            <!-- esse daqui é um evento global-->
+            <br>
+            <button id="keypress" onkeyup="mudarcor()">aperta o botao pra cima</button>
+            <!-- esse daqui é um evento global-->
+            <br>
+            <button id="keypress" onkeypress="mudarcor()">Aperta um outro botao</button>
+            <!-- esse daqui é um evento global-->
+            <br>
+
+            <button onmouseover="mudarcor()">Entra aqui</button> <!-- esse daqui é um evento global-->
+            <br>
+            <button onmouseout="mudarcor()">Sai daqui</button> <!-- esse daqui é um evento global-->
+            <br>
+
+        </section>
+        <section>
+            <button id="maisdeumafunc"> Vamos chamar 2 funçoes?</button>
+            <div id="container">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <button onclick="adicionarEvent()">bora add</button> <!-- esse daqui é um evento global-->
+            <button onclick="removerEvent()">bora remover</button> <!-- esse daqui é um evento global-->
+
+        </section>
+        <section>
+            <div id="myDiv1">
+                <h2>Bubbling:</h2>
+                <p id="myP1">Azul ou branco?</p>
+            </div><br>
+
+            <div id="myDiv2">
+                <h2>Capturing:</h2>
+                <p id="myP2">Azul ou branco?</p>
+            </div>
+
+
+            <div class="divStop" onclick="func2()">Botao externo
+                <div class="divStop" onclick="func1(event)">Botao Interno</div>
+            </div>
+
+            <p>Vamo Parar Por Hoje?<input type="checkbox" id="check"></p>
+           
+        </section>
+
+
+
+
+    </main>
+
+    <script src="script1.js"></script>
+
+</body>
+
+</html>
